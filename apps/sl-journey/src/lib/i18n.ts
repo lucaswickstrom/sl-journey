@@ -3,15 +3,16 @@ import { initReactI18next } from "react-i18next";
 import en from "../locales/en.json";
 
 i18n.use(initReactI18next).init({
-	resources: {
-		en,
-	},
-	lng: "en",
-	fallbackLng: "en",
-	defaultNS: "common",
-	interpolation: {
-		escapeValue: false,
-	},
+  resources: {
+    en,
+  },
+  lng: "en",
+  fallbackLng: "en",
+  defaultNS: "common",
+  interpolation: {
+    escapeValue: false,
+  },
+  showSupportNotice: false,
 });
 
 export default i18n;

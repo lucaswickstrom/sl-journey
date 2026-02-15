@@ -10,35 +10,35 @@ import "../global.css";
 
 // Configure TanStack Query with Convex
 queryClient.setDefaultOptions({
-	queries: {
-		queryKeyHashFn: convexQueryClient.hashFn(),
-		queryFn: convexQueryClient.queryFn(),
-	},
+  queries: {
+    queryKeyHashFn: convexQueryClient.hashFn(),
+    queryFn: convexQueryClient.queryFn(),
+  },
 });
 
 export default function RootLayout() {
-	return (
-		<GestureHandlerRootView style={{ flex: 1 }}>
-			<ConvexProvider client={convex}>
-				<PersistQueryClientProvider
-					client={queryClient}
-					persistOptions={{ persister }}
-				>
-					<StatusBar style="light" />
-					<Stack screenOptions={{ headerShown: false }}>
-						<Stack.Screen name="index" />
-						<Stack.Screen name="setup" options={{ gestureEnabled: false }} />
-						<Stack.Screen
-							name="error-sheet"
-							options={{
-								presentation: "formSheet",
-								sheetGrabberVisible: true,
-								sheetCornerRadius: 16,
-							}}
-						/>
-					</Stack>
-				</PersistQueryClientProvider>
-			</ConvexProvider>
-		</GestureHandlerRootView>
-	);
+  return (
+    <GestureHandlerRootView className="flex-1">
+      <ConvexProvider client={convex}>
+        <PersistQueryClientProvider
+          client={queryClient}
+          persistOptions={{ persister }}
+        >
+          <StatusBar style="light" />
+          <Stack screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="index" />
+            <Stack.Screen name="setup" options={{ gestureEnabled: false }} />
+            <Stack.Screen
+              name="error-sheet"
+              options={{
+                presentation: "formSheet",
+                sheetGrabberVisible: true,
+                sheetCornerRadius: 16,
+              }}
+            />
+          </Stack>
+        </PersistQueryClientProvider>
+      </ConvexProvider>
+    </GestureHandlerRootView>
+  );
 }
