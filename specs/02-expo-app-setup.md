@@ -40,6 +40,8 @@ apps/sl-journey/
 - uniwind + tailwindcss
 - react-native-mmkv
 - react-native-maps (map component)
+- react-native-reanimated (animations)
+- react-native-gesture-handler (gestures)
 - ky (HTTP client)
 - @tanstack/react-query (async state management)
 - @tanstack/react-query-persist-client (query persistence)
