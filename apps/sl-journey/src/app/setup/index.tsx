@@ -2,7 +2,7 @@ import { useState } from "react";
 import { TextInput, KeyboardAvoidingView, Platform } from "react-native";
 import { useTranslation } from "react-i18next";
 import { router } from "expo-router";
-import { Text, Button, VStack, Card } from "@sl-journey/ui";
+import { Text, Button, VStack, Card } from "../../ui";
 import { useDeviceSetup } from "../../hooks/useDeviceSetup";
 
 export default function SetupScreen() {

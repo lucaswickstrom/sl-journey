@@ -1,6 +1,6 @@
 import { View } from "react-native";
 import { useTranslation } from "react-i18next";
-import { Text } from "@sl-journey/ui";
+import { Text } from "../ui";
 import { DeviceSetupGate } from "../components/DeviceSetupGate";
 import { useDevice } from "../contexts/DeviceContext";
 
