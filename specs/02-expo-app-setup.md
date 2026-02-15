@@ -21,14 +21,14 @@ apps/sl-journey/
 ```
 
 ## Acceptance Criteria
-- [ ] Expo 55 app created with `create-expo-app`
-- [ ] Expo Router configured with file-based routing
-- [ ] Uniwind (Tailwind for RN) working with hot reload
-- [ ] MMKV configured for local storage
-- [ ] `expo-location` installed and permissions configured
-- [ ] `pnpm -F sl-journey start` launches Expo dev server
+- [x] Expo 54 app created with `create-expo-app` (Expo 55 still in preview)
+- [x] Expo Router configured with file-based routing
+- [x] Uniwind (Tailwind for RN) configured
+- [x] MMKV configured for local storage
+- [x] `expo-location` installed and permissions configured
+- [ ] `pnpm -F @sl-journey/app start` launches Expo dev server
 - [ ] App runs on iOS simulator
-- [ ] Basic screen renders with Tailwind styles
+- [x] Basic screen renders with Tailwind styles
 
 ## Dependencies
 - expo ~55.0.0

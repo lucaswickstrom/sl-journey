@@ -1,0 +1,47 @@
+{
+	"expo": {
+		"name": "SL Journey",
+		"slug": "sl-journey",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./assets/icon.png",
+		"userInterfaceStyle": "dark",
+		"scheme": "sl-journey",
+		"newArchEnabled": true,
+		"splash": {
+			"image": "./assets/splash-icon.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#111111"
+		},
+		"ios": {
+			"supportsTablet": true,
+			"bundleIdentifier": "com.sljourney.app",
+			"infoPlist": {
+				"NSLocationWhenInUseUsageDescription": "We use your location to show nearby stations and departures.",
+				"NSLocationAlwaysAndWhenInUseUsageDescription": "We use your location to notify you when approaching stations."
+			}
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/adaptive-icon.png",
+				"backgroundColor": "#111111"
+			},
+			"edgeToEdgeEnabled": true,
+			"package": "com.sljourney.app",
+			"permissions": [
+				"ACCESS_COARSE_LOCATION",
+				"ACCESS_FINE_LOCATION",
+				"ACCESS_BACKGROUND_LOCATION"
+			]
+		},
+		"plugins": [
+			"expo-router",
+			[
+				"expo-location",
+				{
+					"locationAlwaysAndWhenInUsePermission": "Allow SL Journey to use your location to show nearby stations."
+				}
+			]
+		]
+	}
+}

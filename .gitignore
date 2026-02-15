@@ -36,3 +36,20 @@ coverage/
 # Cache
 .cache/
 .parcel-cache/
+
+# Expo
+.expo/
+ios/
+android/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+
+# Convex
+packages/convex/convex/_generated/
+
+# pnpm
+pnpm-lock.yaml

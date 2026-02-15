@@ -275,12 +275,12 @@ export const preset = {
 ```
 
 ## Acceptance Criteria
-- [ ] Package created at `packages/ui`
-- [ ] Color tokens exported from `@sl-journey/ui`
-- [ ] Tailwind preset exported with Radix gray + SL colors
-- [ ] All UI components exported (VStack, HStack, Card, List, Button, etc.)
-- [ ] App imports and uses the package
-- [ ] Dark-only design (no light mode)
+- [x] Package created at `packages/ui`
+- [x] Color tokens exported from `@sl-journey/ui`
+- [x] Tailwind preset exported with Radix gray + SL colors
+- [x] All UI components exported (VStack, HStack, Card, List, Button, etc.)
+- [x] App imports and uses the package
+- [x] Dark-only design (no light mode)
 
 ## Shared Types
 

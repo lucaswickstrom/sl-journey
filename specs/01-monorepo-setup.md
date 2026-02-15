@@ -19,15 +19,15 @@ sl-journey/
 ```
 
 ## Acceptance Criteria
-- [ ] `pnpm-workspace.yaml` exists and defines `apps/*` and `packages/*`
-- [ ] Root `package.json` has shared scripts and devDependencies
-- [ ] `biome.json` configured for TypeScript/React
-- [ ] Root `tsconfig.json` with shared compiler options
-- [ ] `vitest.config.ts` configured at root
-- [ ] `pnpm install` runs without errors
-- [ ] `pnpm lint` runs Biome across all packages
-- [ ] `pnpm format` formats code with Biome
-- [ ] `pnpm test` runs Vitest across all packages
+- [x] `pnpm-workspace.yaml` exists and defines `apps/*` and `packages/*`
+- [x] Root `package.json` has shared scripts and devDependencies
+- [x] `biome.json` configured for TypeScript/React
+- [x] Root `tsconfig.json` with shared compiler options
+- [x] `vitest.config.ts` configured at root
+- [x] `pnpm install` runs without errors
+- [x] `pnpm lint` runs Biome across all packages
+- [x] `pnpm format` formats code with Biome
+- [x] `pnpm test` runs Vitest across all packages
 
 ## Dependencies
 - biome

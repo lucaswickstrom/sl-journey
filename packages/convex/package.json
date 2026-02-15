@@ -1,0 +1,17 @@
+{
+	"name": "@sl-journey/convex",
+	"version": "1.0.0",
+	"main": "./convex/_generated/api.js",
+	"types": "./convex/_generated/api.d.ts",
+	"scripts": {
+		"dev": "convex dev",
+		"deploy": "convex deploy"
+	},
+	"dependencies": {
+		"convex": "^1.21.0"
+	},
+	"devDependencies": {
+		"typescript": "~5.6.3"
+	},
+	"private": true
+}

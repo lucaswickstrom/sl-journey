@@ -58,12 +58,12 @@ Note: Client calculates if a ticket is locked based on ticketUsages. A ticket is
 - `order`: number (for sorting, lower = higher priority)
 
 ## Acceptance Criteria
-- [ ] Convex project initialized
-- [ ] Schema defined with all tables and indexes
+- [x] Convex project initialized
+- [x] Schema defined with all tables and indexes
 - [ ] Anonymous auth configured with device ID
-- [ ] Basic CRUD mutations for each table
-- [ ] Basic queries for each table
-- [ ] `pnpm -F convex dev` starts Convex dev server
+- [x] Basic CRUD mutations for each table
+- [x] Basic queries for each table
+- [ ] `pnpm -F @sl-journey/convex dev` starts Convex dev server
 - [ ] Mobile app connects to Convex successfully
 - [ ] User created on first app launch with device ID
 
