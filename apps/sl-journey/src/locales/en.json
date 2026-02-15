@@ -10,5 +10,13 @@
 	"HomeScreen": {
 		"title": "SL Journey",
 		"subtitle": "Stockholm Transit Companion"
+	},
+	"SetupScreen": {
+		"title": "Welcome to SL Journey",
+		"subtitle": "Let's set up your device",
+		"deviceNameLabel": "Device Name",
+		"deviceNamePlaceholder": "e.g., My iPhone",
+		"continue": "Continue",
+		"registering": "Setting up..."
 	}
 }

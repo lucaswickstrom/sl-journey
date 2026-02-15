@@ -8,7 +8,6 @@ Initialize Convex with schema, anonymous auth, and basic queries/mutations.
 packages/convex/
 ├── convex/
 │   ├── schema.ts
-│   ├── auth.ts
 │   ├── users.ts
 │   ├── devices.ts
 │   ├── tickets.ts
@@ -60,12 +59,12 @@ Note: Client calculates if a ticket is locked based on ticketUsages. A ticket is
 ## Acceptance Criteria
 - [x] Convex project initialized
 - [x] Schema defined with all tables and indexes
-- [ ] Anonymous auth configured with device ID
+- [x] Anonymous auth configured with device ID (via device registration flow)
 - [x] Basic CRUD mutations for each table
 - [x] Basic queries for each table
-- [ ] `pnpm -F @sl-journey/convex dev` starts Convex dev server
-- [ ] Mobile app connects to Convex successfully
-- [ ] User created on first app launch with device ID
+- [x] `pnpm -F @sl-journey/convex dev` starts Convex dev server
+- [x] Mobile app connects to Convex successfully
+- [x] User created on first app launch with device ID
 
 ## Dependencies
 - convex

@@ -19,7 +19,12 @@ Handle first-time app launch: generate device ID, prompt user for device name, a
 apps/sl-journey/src/
 ├── app/
 │   └── setup/
+│       ├── _layout.tsx      # Setup route layout
 │       └── index.tsx        # Device name input screen
+├── components/
+│   └── DeviceSetupGate.tsx  # Gate component for device registration
+├── contexts/
+│   └── DeviceContext.tsx    # Device context provider
 ├── hooks/
 │   └── useDeviceSetup.ts    # Setup flow logic
 ├── lib/
@@ -90,12 +95,12 @@ export const register = mutation({
 ```
 
 ## Acceptance Criteria
-- [ ] Device ID retrieved from native API on launch
-- [ ] Setup screen shows for unregistered devices (checked via Convex)
-- [ ] User can enter custom device name
-- [ ] Device registered in Convex with name
-- [ ] User created automatically during device registration
-- [ ] Subsequent launches skip setup screen (device exists in Convex)
+- [x] Device ID retrieved from native API on launch
+- [x] Setup screen shows for unregistered devices (checked via Convex)
+- [x] User can enter custom device name
+- [x] Device registered in Convex with name
+- [x] User created automatically during device registration
+- [x] Subsequent launches skip setup screen (device exists in Convex)
 - [ ] Device name editable in settings (future)
 
 ## Notes

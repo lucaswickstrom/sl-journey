@@ -32,6 +32,13 @@ export default function RootLayout() {
 				>
 					<Stack.Screen name="index" options={{ title: "SL Journey" }} />
 					<Stack.Screen
+						name="setup"
+						options={{
+							headerShown: false,
+							gestureEnabled: false,
+						}}
+					/>
+					<Stack.Screen
 						name="error-sheet"
 						options={{
 							presentation: "formSheet",
