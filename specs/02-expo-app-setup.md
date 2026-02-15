@@ -28,8 +28,8 @@ apps/sl-journey/
 - [x] Uniwind (Tailwind for RN) configured
 - [x] MMKV configured for local storage
 - [x] `expo-location` installed and permissions configured
-- [ ] `pnpm -F @sl-journey/app start` launches Expo dev server
-- [ ] App runs on iOS simulator
+- [x] `pnpm -F @sl-journey/app start` launches Expo dev server
+- [x] App runs on iOS simulator
 - [x] Basic screen renders with Tailwind styles
 
 ## Dependencies
