@@ -4,6 +4,7 @@ import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { convex, convexQueryClient } from "../lib/convex";
 import { persister, queryClient } from "../lib/query-client";
+import "../lib/i18n";
 import "../global.css";
 
 // Configure TanStack Query with Convex

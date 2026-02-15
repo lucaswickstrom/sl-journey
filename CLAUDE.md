@@ -42,6 +42,12 @@ Stockholm transit app built with Expo 55 (React Native), Convex backend, and Tan
 - `throwOnError` for server errors (5xx) to error boundaries
 - Local error state for inline handling
 
+### i18n
+
+- Namespaces are named after component names: `useTranslation("HomeScreen")`
+- Shared translations go in `common` namespace (default)
+- All translations in `src/locales/en.json` with namespaces as top-level keys
+
 ## Key Dependencies
 
 - expo ~55.0.0
@@ -50,6 +56,7 @@ Stockholm transit app built with Expo 55 (React Native), Convex backend, and Tan
 - react-native-mmkv
 - ky
 - uniwind
+- i18next + react-i18next
 
 ## Specs
 

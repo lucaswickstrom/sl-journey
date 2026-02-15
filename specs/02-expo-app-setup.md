@@ -12,7 +12,9 @@ apps/sl-journey/
 │   │   └── index.tsx
 │   ├── components/
 │   ├── hooks/
-│   └── lib/
+│   ├── lib/
+│   └── locales/             # i18n translation files
+│       └── en.json
 ├── assets/
 ├── app.json
 ├── package.json
@@ -42,6 +44,7 @@ apps/sl-journey/
 - @tanstack/react-query (async state management)
 - @tanstack/react-query-persist-client (query persistence)
 - pressto (button press feedback)
+- i18next + react-i18next (internationalization)
 
 ## HTTP Client Setup
 
@@ -110,6 +113,78 @@ export default function RootLayout() {
       <Stack />
     </PersistQueryClientProvider>
   );
+}
+```
+
+## i18n Setup
+
+Use `i18next` with `react-i18next` for translations. English only. Namespaces are named after components.
+
+```typescript
+// src/lib/i18n.ts
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import en from "../locales/en.json";
+
+i18n.use(initReactI18next).init({
+  resources: {
+    en,
+  },
+  lng: "en",
+  fallbackLng: "en",
+  defaultNS: "common",
+  interpolation: {
+    escapeValue: false,
+  },
+});
+
+export default i18n;
+```
+
+```json
+// src/locales/en.json
+{
+  "common": {
+    "loading": "Loading...",
+    "retry": "Retry"
+  },
+  "HomeScreen": {
+    "title": "SL Journey",
+    "subtitle": "Stockholm Transit Companion"
+  }
+}
+```
+
+Type-safe keys via module augmentation:
+
+```typescript
+// src/types/i18n.d.ts
+import "i18next";
+import type en from "../locales/en.json";
+
+declare module "i18next" {
+  interface CustomTypeOptions {
+    defaultNS: "common";
+    resources: typeof en;
+  }
+}
+```
+
+Import i18n in the root layout to initialize:
+
+```tsx
+// src/app/_layout.tsx
+import "@/lib/i18n";
+```
+
+Use translations in components with component name as namespace:
+
+```tsx
+import { useTranslation } from "react-i18next";
+
+function HomeScreen() {
+  const { t } = useTranslation("HomeScreen");
+  return <Text>{t("title")}</Text>;
 }
 ```
 

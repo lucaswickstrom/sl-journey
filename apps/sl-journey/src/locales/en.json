@@ -1,0 +1,14 @@
+{
+	"common": {
+		"loading": "Loading...",
+		"retry": "Retry"
+	},
+	"ErrorSheet": {
+		"title": "Something went wrong",
+		"dismiss": "Dismiss"
+	},
+	"HomeScreen": {
+		"title": "SL Journey",
+		"subtitle": "Stockholm Transit Companion"
+	}
+}
