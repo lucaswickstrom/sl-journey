@@ -1,11 +1,7 @@
-import { Text, type TextProps } from "react-native";
+import { Text, type TextProps } from "./Text";
 
-export interface ButtonTextProps extends TextProps {
-	className?: string;
-}
+export interface ButtonTextProps extends TextProps {}
 
 export function ButtonText({ className = "", ...props }: ButtonTextProps) {
-	return (
-		<Text className={`text-gray-12 text-center ${className}`} {...props} />
-	);
+	return <Text className={`text-center ${className}`} {...props} />;
 }

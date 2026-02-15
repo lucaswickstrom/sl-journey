@@ -1,8 +1,6 @@
-import { Text, type TextProps } from "react-native";
+import { Text, type TextProps } from "./Text";
 
-export interface ListItemValueProps extends TextProps {
-	className?: string;
-}
+export interface ListItemValueProps extends TextProps {}
 
 export function ListItemValue({
 	className = "",

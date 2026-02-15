@@ -6,6 +6,8 @@ export { type TransportMode, getTransportColor } from "./types";
 
 // Components
 export {
+	Text,
+	type TextProps,
 	VStack,
 	type VStackProps,
 	HStack,

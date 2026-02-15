@@ -1,3 +1,4 @@
+export { Text, type TextProps } from "./Text";
 export { VStack, type VStackProps } from "./VStack";
 export { HStack, type HStackProps } from "./HStack";
 export { Card, type CardProps } from "./Card";

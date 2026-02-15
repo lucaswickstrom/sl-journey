@@ -1,22 +1,28 @@
 import { PressableScale } from "pressto";
 import type { ReactNode } from "react";
 import { Children, isValidElement } from "react";
-import {
-	Pressable,
-	type StyleProp,
-	StyleSheet,
-	type ViewStyle,
-} from "react-native";
+import { Pressable } from "react-native";
+import { withUniwind } from "uniwind";
 import { ButtonText } from "./ButtonText";
+
+const StyledPressableScale = withUniwind(PressableScale);
 
 export interface ButtonProps {
 	children: ReactNode;
 	onPress?: () => void;
-	style?: StyleProp<ViewStyle>;
+	className?: string;
 	disabled?: boolean;
 }
 
-export function Button({ children, onPress, style, disabled }: ButtonProps) {
+const baseClassName =
+	"bg-gray-a4 border-hairline border-gray-a6 rounded-xl px-4 py-3" as const;
+
+export function Button({
+	children,
+	onPress,
+	className = "",
+	disabled,
+}: ButtonProps) {
 	// Auto-wrap string children in ButtonText
 	const content = Children.map(children, (child) => {
 		if (typeof child === "string") {
@@ -30,29 +36,18 @@ export function Button({ children, onPress, style, disabled }: ButtonProps) {
 
 	if (disabled) {
 		return (
-			<Pressable style={[styles.button, style, styles.disabled]}>
+			<Pressable className={`${baseClassName} opacity-50 ${className}`}>
 				{content}
 			</Pressable>
 		);
 	}
 
 	return (
-		<PressableScale onPress={onPress} style={[styles.button, style]}>
+		<StyledPressableScale
+			onPress={onPress}
+			className={`${baseClassName} ${className}`}
+		>
 			{content}
-		</PressableScale>
+		</StyledPressableScale>
 	);
 }
-
-const styles = StyleSheet.create({
-	button: {
-		backgroundColor: "rgba(255,255,255,0.105)", // gray-a4
-		borderWidth: StyleSheet.hairlineWidth,
-		borderColor: "rgba(255,255,255,0.172)", // gray-a6
-		borderRadius: 12,
-		paddingHorizontal: 16,
-		paddingVertical: 12,
-	},
-	disabled: {
-		opacity: 0.5,
-	},
-});

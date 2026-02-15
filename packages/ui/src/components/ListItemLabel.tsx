@@ -1,12 +1,10 @@
-import { Text, type TextProps } from "react-native";
+import { Text, type TextProps } from "./Text";
 
-export interface ListItemLabelProps extends TextProps {
-	className?: string;
-}
+export interface ListItemLabelProps extends TextProps {}
 
 export function ListItemLabel({
 	className = "",
 	...props
 }: ListItemLabelProps) {
-	return <Text className={`text-gray-12 ${className}`} {...props} />;
+	return <Text className={className} {...props} />;
 }
