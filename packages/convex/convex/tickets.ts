@@ -13,7 +13,7 @@ export const getById = query({
 	handler: async (ctx, args) => {
 		return await ctx.db
 			.query("tickets")
-			.withIndex("by_id", (q) => q.eq("id", args.id))
+			.withIndex("by_ticket_id", (q) => q.eq("id", args.id))
 			.unique();
 	},
 });

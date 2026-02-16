@@ -16,7 +16,7 @@ export default defineSchema({
 		id: v.string(),
 		appToken: v.string(),
 		name: v.string(),
-	}).index("by_id", ["id"]),
+	}).index("by_ticket_id", ["id"]),
 
 	ticketUsages: defineTable({
 		ticketId: v.id("tickets"),
