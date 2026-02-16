@@ -2,7 +2,7 @@ import { useState } from "react";
 import { TextInput, KeyboardAvoidingView, Platform } from "react-native";
 import { useTranslation } from "react-i18next";
 import { router } from "expo-router";
-import { Text, Button, VStack, Card } from "../../ui";
+import { Button, VStack, Card, gray, Text } from "../../ui";
 import { useDeviceSetup } from "../../hooks/useDeviceSetup";
 
 export default function SetupScreen() {
@@ -36,9 +36,10 @@ export default function SetupScreen() {
           <VStack className="gap-3">
             <Text className="text-sm text-gray-11">{t("deviceNameLabel")}</Text>
             <TextInput
-              className="bg-gray-a3 rounded-lg px-4 py-3 text-gray-12 text-base"
+              className="bg-gray-a3 rounded-lg px-4 py-3 text-base min-h-12"
+              style={{ color: gray[12] }}
               placeholder={t("deviceNamePlaceholder")}
-              placeholderTextColor="#888"
+              placeholderTextColor={gray[9]}
               value={deviceName}
               onChangeText={setDeviceName}
               autoCapitalize="words"

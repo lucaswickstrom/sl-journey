@@ -5,6 +5,7 @@ import { StatusBar } from "expo-status-bar";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { convex, convexQueryClient } from "../lib/convex";
 import { persister, queryClient } from "../lib/query-client";
+import { gray } from "../ui/colors";
 import "../lib/i18n";
 import "../global.css";
 
@@ -25,7 +26,7 @@ export default function RootLayout() {
           persistOptions={{ persister }}
         >
           <StatusBar style="light" />
-          <Stack screenOptions={{ headerShown: false }}>
+          <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: gray[1] } }}>
             <Stack.Screen name="index" />
             <Stack.Screen name="setup" options={{ gestureEnabled: false }} />
             <Stack.Screen

@@ -1,6 +1,51 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "uniwind";
+
+@theme {
+	--color-inherit: inherit;
+	--color-current: currentColor;
+	--color-transparent: transparent;
+	--color-black: #000000;
+	--color-white: #ffffff;
+
+	/* Gray scale (Radix dark) */
+	--color-gray-1: #111111;
+	--color-gray-2: #191919;
+	--color-gray-3: #222222;
+	--color-gray-4: #2a2a2a;
+	--color-gray-5: #313131;
+	--color-gray-6: #3a3a3a;
+	--color-gray-7: #484848;
+	--color-gray-8: #606060;
+	--color-gray-9: #6e6e6e;
+	--color-gray-10: #7b7b7b;
+	--color-gray-11: #b4b4b4;
+	--color-gray-12: #eeeeee;
+
+	/* Gray alpha scale (for overlays, borders, backgrounds) */
+	--color-gray-a1: rgba(0, 0, 0, 0);
+	--color-gray-a2: rgba(255, 255, 255, 0.034);
+	--color-gray-a3: rgba(255, 255, 255, 0.071);
+	--color-gray-a4: rgba(255, 255, 255, 0.105);
+	--color-gray-a5: rgba(255, 255, 255, 0.134);
+	--color-gray-a6: rgba(255, 255, 255, 0.172);
+	--color-gray-a7: rgba(255, 255, 255, 0.231);
+	--color-gray-a8: rgba(255, 255, 255, 0.332);
+	--color-gray-a9: rgba(255, 255, 255, 0.391);
+	--color-gray-a10: rgba(255, 255, 255, 0.445);
+	--color-gray-a11: rgba(255, 255, 255, 0.685);
+	--color-gray-a12: rgba(255, 255, 255, 0.929);
+
+	/* SL transit colors */
+	--color-sl-metro-blue: #0077c8;
+	--color-sl-metro-red: #e4002b;
+	--color-sl-metro-green: #009e49;
+	--color-sl-commuter: #ec619f;
+	--color-sl-tram: #ed8b00;
+	--color-sl-bus: #e4002b;
+	--color-sl-bus-trunk: #0077c8;
+	--color-sl-ferry: #00a3e0;
+}
 
 @utility border-hairline {
 	border-width: hairlineWidth();
